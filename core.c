@@ -209,8 +209,8 @@ int main(void)
             break;
         }
 
-        snprintf(event, SIZE, "Command: %s | Result: %s",
-                 command, response);
+        snprintf(event, SIZE, "Command: %.200s | Result: %.280s",
+         command, response);
         log_event(fifo_fd, event);
     }
 
